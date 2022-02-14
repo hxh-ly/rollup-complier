@@ -37,7 +37,7 @@ class Bundle {
     return { code: magicString.toString() }
   }
   fetchModule(importee, importer) {
-    //entry路径 读文件
+    // 1 entry路径 读文件
     let route;
     if (!importer) {
       route = importee
@@ -57,6 +57,7 @@ class Bundle {
           bundle: this  //属于哪个bundle
         }
       )
+      // 2 模块
       return module
     }
   }
