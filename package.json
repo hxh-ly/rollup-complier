@@ -1,0 +1,24 @@
+{
+  "name": "Rollup_learn",
+  "version": "1.0.0",
+  "description": "原文链接:[rollup - 构建原理及简易实现 - 掘金 (juejin.cn)](https://juejin.cn/post/6971970604010307620#heading-11)",
+  "main": "bundle.js",
+  "dependencies": {
+    "magic-string": "^0.25.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hxh-ly/rollup-complier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hxh-ly/rollup-complier/issues"
+  },
+  "homepage": "https://github.com/hxh-ly/rollup-complier#readme"
+}
