@@ -135,5 +135,5 @@ bundleString.addSource({
 return magicString.toString()
 ```
 
-![img](readme/v2-b5df157d4e17f16e12453f47a5cd8328_720w.jpg)
+![img](https://github.com/hxh-ly/rollup-complier/readme/v2-b5df157d4e17f16e12453f47a5cd8328_720w.jpg)
 
