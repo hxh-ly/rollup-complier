@@ -1,7 +1,7 @@
 const fs = require('fs')
 var MagicString = require('magic-string');
 const path = require('path')
-const { Module } = require('module');
+const  Module  = require('./module');
 class Bundle {
   constructor(options) {
     this.entryPath = options.entry.replace(/\.js$/, '') + '.js'
@@ -19,12 +19,14 @@ class Bundle {
   }
 
   generate() {
-    let magicString = MagicString.Bundle()
+    let magicString =new MagicString.Bundle()
     //1 遍历模块
     this.statements.forEach(statement => {
       //删除掉export
+      
       const source = statement._source
       if (statement.type === 'ExportNamedDeclaration') {
+        console.log(statement);
         source.remove(statement.start, statement.declaration.start)
       }
       //2 合并
@@ -50,9 +52,9 @@ class Bundle {
     }
     if (route) {
       let code = fs.readFileSync(route, 'utf8')
-      const module = new Module(
+      let module = new Module(
         {
-          code,
+          code:code,
           path: route,
           bundle: this  //属于哪个bundle
         }
@@ -61,14 +63,7 @@ class Bundle {
       return module
     }
   }
-  //当前模块的所有语句，把这些语句中定义的变量的语句都放在结果里
-  expandAllStatements() {
-    let allStatements=[]
-    this.ast.body.forEach(statement=>{
-      if(statement.type === 'ImportDeclaration') {return}
-      let statements = this.expandStatement(statement)
-      allStatements.push(...statements)
-    })
-    return allStatements
-  }
+
 }
+module.exports=Bundle
+

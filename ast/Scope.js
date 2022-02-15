@@ -18,4 +18,4 @@ class Scope {
 
   }
 }
-export default Scope
+module.exports= Scope

@@ -6,7 +6,9 @@
   "dependencies": {
     "magic-string": "^0.25.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "acorn": "^8.7.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/hxh-ly/rollup-complier/issues"
   },
-  "homepage": "https://github.com/hxh-ly/rollup-complier#readme"
+  "homepage": "https://github.com/hxh-ly/rollup-complier#readme",
+  
 }

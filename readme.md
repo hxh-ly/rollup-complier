@@ -29,6 +29,18 @@
 ## 变量解释
 
 ```js
+class Scope {
+	constructor(options = {}) {
+    this.name = options.name
+    this.parent = options.parent
+    this.names = options.params || []
+  }
+}
+```
+
+
+
+```js
 class Bundle 
 {
   constructor(options){
@@ -123,5 +135,5 @@ bundleString.addSource({
 return magicString.toString()
 ```
 
-
+![img](readme/v2-b5df157d4e17f16e12453f47a5cd8328_720w.jpg)
 
